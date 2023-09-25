@@ -1,9 +1,13 @@
 # DSA-Bit-Manipulation
 
+### Number of 1 Bits
+logic 
 ```cpp
-#include <iostream>
-
-int main() {
-    std::cout << "Hello, world!" << std::endl;
-    return 0;
+int countSetBits(int number){
+    int totalCount ;
+    while(number){
+        number =number&(number-1);
+        totalCount++;
+    }
+    return totalCount++;
 }
