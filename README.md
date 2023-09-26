@@ -34,3 +34,34 @@ __Space Complexity:__ O(1);
 
 __Note:__ We can solve this using map,array etc.But Best Approach Discuss above.
 
+### First Two Non repeating Number [Reference](https://www.geeksforgeeks.org/non-repeating-element/)
+
+[ Find Rightmost Set Value](https://www.educative.io/answers/how-to-find-the-position-of-the-rightmost-set-bit-of-an-integer)
+```cpp
+ vector<int> singleNumber(vector<int> nums) 
+    {
+        int length =nums.size();
+        int valueOfXor=0;
+        for(int i=0;i<length;++i)
+        //after xor operation duplicate value will be remove
+            valueOfXor=valueOfXor^nums[i];
+    
+    
+    //find right most set bits
+    int rightMostSetBits=valueOfXor&~(valueOfXor-1);
+   
+   vector<int>nonRepeatingNumber(2);
+    
+    //first divide the array between two parts depends on set bit.
+     for(int i=0;i<length;++i){
+         
+         if(rightMostSetBits&nums[i])
+             nonRepeatingNumber[1]^=nums[i];
+          else 
+             nonRepeatingNumber[0]^=nums[i];
+         
+     }
+    sort(nonRepeatingNumber.begin(),nonRepeatingNumber.end());
+     
+     return nonRepeatingNumber;
+    }```
