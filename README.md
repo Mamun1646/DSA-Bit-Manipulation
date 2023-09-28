@@ -1,5 +1,32 @@
 # DSA-Bit-Manipulation
 
+
+
+### Even and Odd Check
+```cpp
+if(number & 1){
+    //number is odd
+    //  3 =11
+    //& 1 =01
+    //    =01
+}
+else //number is even
+  //  2 =10
+    //& 1 =01
+    //    =00
+```
+
+### Swap two numbers without third variable
+```cpp
+a =5;  //101
+b =7;   //111
+
+a =a^b;  //010
+b =a^b;  //101;  5 
+a =a^b;  //111    7
+ //swap using xor operator
+```
+
 ### 1.Number of 1 Bits
 
 #### Method 1 : Logic (Implementation of Brian Kernighan’s Algorithm)
