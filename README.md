@@ -27,6 +27,17 @@ a =a^b;  //111    7
  //swap using xor operator
 ```
 
+### Find ith bit ?(Only Logic)
+```cpp
+int a = 32 //100000
+int bitMask=1;
+for(int i=0;i<ith;++i)
+ //Left shit bitMask<<ith
+int ansBit = a&bitMask;
+
+
+```
+
 ### 1.Number of 1 Bits
 
 #### Method 1 : Logic (Implementation of Brian Kernighan’s Algorithm)
