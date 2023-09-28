@@ -27,13 +27,46 @@ a =a^b;  //111    7
  //swap using xor operator
 ```
 
+
+
+
 ### Find ith bit ?(Only Logic)
+
+
 ```cpp
 int a = 32 //100000
 int bitMask=1;
-for(int i=0;i<ith;++i)
+bitMask =bitMask<<i
  //Left shit bitMask<<ith
 int ansBit = a&bitMask;
+
+
+```
+### set the ith bit ?
+
+```cpp
+int a = 32 //100000
+int bitMask=1;
+bitMask =bitMask<<i
+ //Left shit bitMask<<ith
+int ansBit = a | bitMask; 
+//Just operaor will be or 
+
+
+```
+### clear the ith bit ?
+
+```cpp
+int a = 36 //100100
+int bitMask=1;
+bitMask =bitMask<<i
+ //Left shit bitMask<<ith
+
+bitMask =~bitMask;  //111011
+
+int ansBit = a & bitMask;     //100000
+
+
 
 
 ```
